@@ -6,6 +6,7 @@ const yts = require('yt-search');
 module.exports = {
     name: "music",
     usedby: 0,
+    nickName: ["sing"],
     version: "1.0.0",
     info: "Get music",
     onPrefix: true,
