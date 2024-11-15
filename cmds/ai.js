@@ -24,7 +24,7 @@ module.exports = {
     dev: "Jonell Magallanes",
     nickName: ["chatgpt", "gpt"],
     info: "EDUCATIONAL",
-    onPrefix: true,
+    onPrefix: false,
     cooldowns: 6,
 
     onReply: async function ({ reply, api, event }) {
@@ -52,7 +52,7 @@ module.exports = {
         if (!target[0]) return api.sendMessage("Please provide your question.\n\nExample: ai what is the solar system?", threadID, messageID);
 
         const apiUrl = `https://ccprojectapis.ddns.net/api/gpt4o?ask=${encodeURIComponent(target.join(" "))}&id=${id}`;
-        const lad = await actions.reply("🔎 Searching for an answer. Please wait...", threadID, messageID);
+        const lad = await actions.reply("✨ thinking...", threadID, messageID);
 
         try {
             if (event.type === "message_reply" && event.messageReply.attachments && event.messageReply.attachments[0]) {
