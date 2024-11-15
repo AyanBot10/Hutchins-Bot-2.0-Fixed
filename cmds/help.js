@@ -61,14 +61,14 @@ module.exports = {
                                        commandInfo.usedby === 3 ? "Moderator" :
                                        commandInfo.usedby === 4 ? "Admin and Moderator" : "Unknown";
 
-                const helpMessage = `╭─『 ${commandInfo.name || "Unknown"} 』\n` +
+                const helpMessage = `╭─╼━━━━━━━━━━╾─╮\n` +
                     `│✧ Name: ${commandInfo.name || "Unknown"}\n` +
                     `│✧ Permission: ${permissionText}\n` +
                     `│✧ Developer: ${commandInfo.dev || "Unknown"}\n` +
                     `│✧ Cooldown: ${commandInfo.cooldowns || "Unknown"} seconds\n` +
                     `│✧ Description: ${commandInfo.info || "Unknown"}\n` +
                     `│✧ Need Prefix: ${commandInfo.onPrefix !== undefined ? commandInfo.onPrefix : "Unknown"}\n` +
-                    `╰───────────◊`;
+                    `╰─━━━━━━━━━━━╾─╯`;
                 return api.shareContact(helpMessage, api.getCurrentUserID(), event.threadID);
             } else {
                 return api.sendMessage(`Command "${commandName}" not found.`, event.threadID);
