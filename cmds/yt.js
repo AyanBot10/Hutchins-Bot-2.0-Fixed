@@ -6,6 +6,7 @@ const ytdl = require('@distube/ytdl-core');
 module.exports = {
     name: "yt",
     usedby: 0,
+    nickName: ["video"],
     version: "1.0.0",
     info: "Get video",
     onPrefix: true,
