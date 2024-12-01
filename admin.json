@@ -14,7 +14,7 @@
   "resend": false,
   "notilogs": true,
   "appstate": "./appstate.json",
-  "restart": true,
+  "restart": false,
   "restartTime": 50,
   "FCA": "hut-chat-api",
   "loginpanel": {
